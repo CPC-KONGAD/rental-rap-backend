@@ -1,0 +1,5 @@
+@EndUserText.label: 'Rental Management UI Service'
+define service ZRNT_RENTAL_UI {
+ expose ZC_RNT_RENTAL as Rentals; expose ZC_RNT_ITEM as RentalItems; expose ZC_RNT_EQUIP as RentalEquipment;
+ expose ZC_RNT_EXT as RentalExtensions; expose ZC_RNT_EVENT as RentalEvents; expose ZC_RNT_INVEXC as RentalInvoiceExceptions;
+}

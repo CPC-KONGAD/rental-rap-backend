@@ -1,0 +1,3 @@
+projection;
+strict ( 2 );
+define behavior for ZC_RNT_RENTAL alias Rental { use create; use update; use delete; use action Submit; use action OffRent; }

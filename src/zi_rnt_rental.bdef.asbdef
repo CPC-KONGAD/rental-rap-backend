@@ -1,0 +1,24 @@
+managed implementation in class zbp_i_rnt_rental unique;
+strict ( 2 );
+
+define behavior for ZI_RNT_RENTAL alias Rental
+persistent table zrnt_hdr
+lock master
+etag master LocalLastChangedAt
+{
+ create; update; delete;
+ field ( readonly ) RentalUuid, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt, LocalLastChangedAt;
+ field ( mandatory ) CompanyCode, Plant, StartDate, PlannedEndDate, CurrencyCode;
+ determination SetDefaults on modify { create; }
+ validation ValidateDates on save { create; update; field StartDate, PlannedEndDate, ActualEndDate; }
+ action Submit result [1] $self;
+ action OffRent result [1] $self;
+ mapping for zrnt_hdr {
+  RentalUuid = rental_uuid; RentalId = rental_id; Requestor = requestor; CompanyCode = company_code; Plant = plant;
+  PurchasingOrganization = purchasing_org; Supplier = supplier; StartDate = start_date; PlannedEndDate = planned_end_date; ActualEndDate = actual_end_date;
+  Status = status; CurrencyCode = currency_code; EstimatedCost = estimated_cost; ActualCost = actual_cost; CostCenter = cost_center; WbsElement = wbs_element;
+  PurchaseRequisition = purchase_requisition; ContractNumber = contract_number; PurchaseOrder = purchase_order; OffContract = off_contract;
+  BusinessPurpose = business_purpose; CreatedBy = created_by; CreatedAt = created_at; LastChangedBy = last_changed_by; LastChangedAt = last_changed_at;
+  LocalLastChangedAt = local_last_changed_at;
+ }
+}

@@ -1,0 +1,16 @@
+object_type,object_name,source
+DDLS,ZRNT_HDR,src/zrnt_hdr.ddls.asddls
+DDLS,ZRNT_ITEM,src/zrnt_item.ddls.asddls
+DDLS,ZRNT_EQUIP,src/zrnt_equip.ddls.asddls
+DDLS,ZRNT_EXT,src/zrnt_ext.ddls.asddls
+DDLS,ZRNT_EVENT,src/zrnt_event.ddls.asddls
+DDLS,ZRNT_INVEXC,src/zrnt_invexc.ddls.asddls
+DDLS,ZI_RNT_ITEM,src/zi_rnt_item.ddls.asddls
+DDLS,ZI_RNT_EQUIP,src/zi_rnt_equip.ddls.asddls
+DDLS,ZI_RNT_EXT,src/zi_rnt_ext.ddls.asddls
+DDLS,ZI_RNT_EVENT,src/zi_rnt_event.ddls.asddls
+DDLS,ZI_RNT_INVEXC,src/zi_rnt_invexc.ddls.asddls
+DDLS,ZI_RNT_RENTAL,src/zi_rnt_rental.ddls.asddls
+BDEF,ZI_RNT_RENTAL,src/zi_rnt_rental.bdef.asbdef
+CLAS,ZBP_I_RNT_RENTAL,src/zbp_i_rnt_rental.clas.abap
+SRVD,ZRNT_RENTAL_UI,src/zrnt_rental_ui.srvd.asdsv
